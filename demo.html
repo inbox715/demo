@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Red Dot Placer</title>
+    <style>
+        .red-dot {
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+        }
+    </style>
+</head>
+
+
+<body style="width: 100vw ; height:100vh" >
+
+</body>
+
+    <script>
+        // Function to create and place a red dot at the clicked coordinates
+        function placeRedDot(event) {
+            const redDot = document.createElement('div');
+            redDot.className = 'red-dot';
+            redDot.style.left = (event.clientX - 5) + 'px'; // Offset for centering
+            redDot.style.top = (event.clientY - 5) + 'px'; // Offset for centering
+            document.body.appendChild(redDot);
+        }
+
+        // Add a click event listener to the document body
+        document.body.addEventListener('click', placeRedDot);
+    </script>
+</html>
